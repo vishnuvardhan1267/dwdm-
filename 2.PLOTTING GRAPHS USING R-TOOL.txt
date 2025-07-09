@@ -1,0 +1,10 @@
+PLOTTING GRAPHS USING R-TOOL
+
+
+data<-read.csv("Mall_Customers.csv")
+View(data)
+hist(data$Spending.Score..1.100.)
+scatter.smooth(data$CustomerID,data$Annual.Income..k..)
+data1<-data[which(data$CustomerID=="100"),names(data)%in%c("CustomerID","Age")]
+data2<-data[which(data$CustomerID=="50"),names(data)%in%c("CustomerID","Age")]
+boxplot(data1,data2)

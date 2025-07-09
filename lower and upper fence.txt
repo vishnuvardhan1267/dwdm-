@@ -1,0 +1,6 @@
+lf<-quantile(data$bedrooms,0.25)-1.5*(IQR(data$bedrooms))
+print(lf)
+uf<-quantile(data$bedrooms,0.25)+1.5*(IQR(data$bedrooms))
+print(uf)
+outlier<-boxplot.stats(data$bedrooms)$out
+print(outlier)

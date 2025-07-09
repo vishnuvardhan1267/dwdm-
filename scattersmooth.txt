@@ -1,0 +1,3 @@
+data<-read.csv("2015.csv")
+View data
+scatter.smooth(data$CustomerID,data$Annual.Income..k..)

@@ -1,0 +1,19 @@
+CENTRAL TENDENCY AND DATA DISPERSION  MEASURES USING R-TOOL
+
+
+data<-read.csv("HousePrice_data.csv")
+View(data)
+mean(data$bedrooms)
+median(data$bathrooms)
+mode(data$floors)
+summary(data$bedrooms)
+IQR(data$bedrooms)
+quantile(data$bedrooms)
+range(data$bedrooms)
+mean(range(data$bedrooms))
+lf<-quantile(data$bedrooms,0.25)-1.5*(IQR(data$bedrooms))
+print(lf)
+uf<-quantile(data$bedrooms,0.25)+1.5*(IQR(data$bedrooms))
+print(uf)
+outlier<-boxplot.stats(data$bedrooms)$out
+print(outlier)

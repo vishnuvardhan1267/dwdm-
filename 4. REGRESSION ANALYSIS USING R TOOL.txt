@@ -1,0 +1,28 @@
+
+
+//LINEAR REGRESSION
+
+data<-read.csv("diabetes.csv")
+View(data)
+Relation<-lm(data$BloodPressure~data$Age)
+Png<-(file="linear regression.png")
+plot(data$Age,data$BloodPressure,col="purple",main="Linear Regression Analysis",abline=lm(data$BloodPressure~data$Age),xlab="BloodPressure",ylab="Age")
+A<-data.frame(data$Age)
+Result<-predict(Relation,A)
+print(Result)
+
+// MULTIPLE REGRESSION
+
+data<-read.csv("diabetes.csv")
+View(data)
+input<-data[,c("Age","BloodPressure","Glucose")]
+model<-lm(Age~BloodPressure+Glucose,data = input)
+print(model)
+A<-coef(model)[1]
+print(A)
+xBloodPressure<-coef(model)[2]
+yGlucose<-coef(model)[3]
+print(xBloodPressure)
+print(yGlucose)
+y=A+xBloodPressure+yGlucose
+print(y)

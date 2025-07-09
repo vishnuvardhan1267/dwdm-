@@ -1,0 +1,6 @@
+data<-read.csv("HousePrice_data.csv")
+View(data)
+mean(data$bedrooms)
+median(data$bathrooms)
+mode(data$floors)
+summary(data$bedrooms)
